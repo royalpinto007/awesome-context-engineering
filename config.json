@@ -1,0 +1,21 @@
+{
+  "name": "awesome-context-engineering",
+  "title": "Awesome Context Engineering",
+  "tagline": "A practitioner-first directory for context engineering in LLMs and agents.",
+  "siteHost": "context-engineering.agentpostmortem.com",
+  "ghUrl": "https://github.com/royalpinto007/awesome-context-engineering",
+  "cats": {
+    "foundational": "Foundations and definitions",
+    "management": "Context management and compaction",
+    "rag": "Retrieval and RAG",
+    "compression": "Prompt and context compression",
+    "memory": "Memory systems",
+    "tokens": "Token counting and cost",
+    "profiling": "Context-window profiling",
+    "frameworks": "Frameworks",
+    "multiagent": "Multi-agent and isolation",
+    "evals": "Evals for context quality",
+    "benchmarks": "Long-context and context rot",
+    "papers": "Papers"
+  }
+}
