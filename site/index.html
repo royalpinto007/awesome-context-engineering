@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Awesome Context Engineering</title>
+<meta name="description" content="A practitioner-first directory for context engineering in LLMs and agents." />
+<style>
+  :root{ --bg:#0b0d10; --panel:#14181d; --panel2:#1b2027; --bd:#262d36; --tx:#e6edf3; --mut:#9aa7b4; --acc:#6ee7b7; --acc2:#38bdf8; --chip:#1f2630; }
+  @media (prefers-color-scheme: light){ :root{ --bg:#f7f8fa; --panel:#fff; --panel2:#f0f2f5; --bd:#e2e6eb; --tx:#0d1117; --mut:#586069; --acc:#059669; --acc2:#0284c7; --chip:#eef1f5; } }
+  *{box-sizing:border-box} html,body{overflow-x:hidden;max-width:100%}
+  body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--acc2);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1160px;margin:0 auto;padding:clamp(16px,4vw,30px) clamp(14px,4vw,26px) 60px}
+  header h1{margin:0 0 4px;font-size:1.7rem;letter-spacing:-.02em} header h1 .g{color:var(--acc)}
+  header p{margin:0;color:var(--mut)}
+  .top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:18px}
+  .ghlink{border:1px solid var(--bd);background:var(--panel);padding:7px 12px;border-radius:8px;color:var(--tx);font-weight:600;font-size:.86rem}
+  .controls{position:sticky;top:0;background:var(--bg);padding:12px 0;z-index:5;border-bottom:1px solid var(--bd);margin-bottom:16px}
+  #q{width:100%;padding:11px 14px;border:1px solid var(--bd);border-radius:10px;background:var(--panel);color:var(--tx);font-size:1rem;outline:none}
+  #q:focus{border-color:var(--acc2)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+  .chip{cursor:pointer;border:1px solid var(--bd);background:var(--chip);color:var(--mut);padding:5px 11px;border-radius:999px;font-size:.82rem;user-select:none}
+  .chip.on{background:var(--acc2);border-color:var(--acc2);color:#04121c;font-weight:700}
+  .count{color:var(--mut);font-size:.82rem;margin:6px 2px 14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:12px}
+  .card{border:1px solid var(--bd);background:var(--panel);border-radius:12px;padding:14px 15px;display:flex;flex-direction:column;gap:8px}
+  .card:hover{border-color:var(--acc2)}
+  .card .h{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .card .h a{font-weight:700;font-size:1.02rem;color:var(--tx)}
+  .stars{color:var(--mut);font-size:.8rem;white-space:nowrap}
+  .cat{font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--acc);font-weight:700}
+  .desc{color:var(--mut);font-size:.88rem;margin:0}
+  @media (max-width:520px){.top{flex-direction:column;align-items:flex-start}.card{padding:13px}}
+  footer{margin-top:34px;color:var(--mut);font-size:.82rem;text-align:center}
+  .empty{color:var(--mut);padding:40px 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <header><h1>Awesome Context Engineering</h1><p>A practitioner-first directory for context engineering in LLMs and agents.</p></header>
+    <a class="ghlink" href="https://github.com/royalpinto007/awesome-context-engineering">Star on GitHub</a>
+  </div>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search..." autocomplete="off" />
+    <div class="chips" id="chips"></div>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>No matches. Try another term, or <a href="https://github.com/royalpinto007/awesome-context-engineering#contributing">add it</a>.</div>
+  <footer><span id="updated"></span> &middot; <a href="https://github.com/royalpinto007/awesome-context-engineering">Contribute</a> &middot; built by <a href="https://royalpinto007.agentpostmortem.com">Royal Pinto</a></footer>
+</div>
+<script>
+const DATA = [{"name":"Effective context engineering (Anthropic)","url":"https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents","category":"foundational","desc":"Anthropic's formal definition: curating and maintaining the optimal set of tokens during LLM inference.","stars":null},{"name":"Context Engineering for Agents (LangChain)","url":"https://www.langchain.com/blog/context-engineering-for-agents","category":"foundational","desc":"LangChain's canonical framing of the four moves: write, select, compress, isolate.","stars":null},{"name":"Context Engineering for Agents (Lance Martin)","url":"https://rlancemartin.github.io/2025/06/23/context_engineering/","category":"foundational","desc":"Widely-cited practitioner essay on managing an agent's context across its trajectory.","stars":null},{"name":"Context Engineering: A Practical Guide (Sourcegraph)","url":"https://sourcegraph.com/blog/context-engineering","category":"foundational","desc":"Practical guide to context engineering for coding agents from the Sourcegraph/Amp team.","stars":null},{"name":"Context Engineering 101 (Victor Dibia)","url":"https://newsletter.victordibia.com/p/context-engineering-101-how-agents","category":"foundational","desc":"How agents implement context-engineering strategies, worked through Claude Code.","stars":null},{"name":"context-mode","url":"https://github.com/mksglu/context-mode","category":"management","desc":"MCP server that sandboxes tool output (up to 98% token reduction) and persists session memory in SQLite with BM25 retrieval on compaction.","repo":"mksglu/context-mode","stars":19533},{"name":"hermes-lcm","url":"https://github.com/stephenschoettler/hermes-lcm","category":"management","desc":"DAG-based context engine that compacts old context into depth-aware summary nodes without dropping messages.","repo":"stephenschoettler/hermes-lcm","stars":930},{"name":"context-llemur","url":"https://github.com/jerpint/context-llemur","category":"management","desc":"Structural, human-plus-LLM-managed context tool for collaboration, no embeddings.","repo":"jerpint/context-llemur","stars":93},{"name":"Context Compaction teardown (badlogic)","url":"https://gist.github.com/badlogic/cd2ef65b0697c4dbe2d13fbecb0a0a5f","category":"management","desc":"Comparative teardown of how Claude Code, Codex CLI, OpenCode, and Amp handle context compaction.","stars":null},{"name":"LlamaIndex","url":"https://github.com/run-llama/llama_index","category":"rag","desc":"Leading data framework for ingesting, indexing, and retrieving context to augment LLM output.","repo":"run-llama/llama_index","stars":51264},{"name":"Chroma","url":"https://github.com/chroma-core/chroma","category":"rag","desc":"Open-source vector database for building retrieval and context layers for LLM apps.","repo":"chroma-core/chroma","stars":28916},{"name":"LLMLingua (Microsoft)","url":"https://github.com/microsoft/LLMLingua","category":"compression","desc":"Coarse-to-fine prompt compression using a small LM to drop low-information tokens; LLMLingua-2 and LongLLMLingua included.","repo":"microsoft/LLMLingua","stars":6509},{"name":"LLMLingua paper","url":"https://arxiv.org/abs/2310.05736","category":"compression","desc":"Original paper on compressing prompts for accelerated inference while preserving quality.","stars":null},{"name":"Mem0","url":"https://github.com/mem0ai/mem0","category":"memory","desc":"Lightweight open-source memory layer adding persistent memory to any LLM app over vector and relational storage.","repo":"mem0ai/mem0","stars":62234},{"name":"Letta (formerly MemGPT)","url":"https://github.com/letta-ai/letta","category":"memory","desc":"Stateful-agent platform with main/recall/archival memory tiers the model pages in and out via tool calls.","repo":"letta-ai/letta","stars":24046},{"name":"Graphiti (Zep)","url":"https://github.com/getzep/graphiti","category":"memory","desc":"Temporal knowledge-graph memory that tracks how facts change over time with provenance.","repo":"getzep/graphiti","stars":29412},{"name":"Cognee","url":"https://github.com/topoteretes/cognee","category":"memory","desc":"Open-source memory framework building knowledge graphs from data for agent long-term memory.","repo":"topoteretes/cognee","stars":29642},{"name":"tiktoken (OpenAI)","url":"https://github.com/openai/tiktoken","category":"tokens","desc":"OpenAI's official BPE tokenizer for exact local token counting to stay inside context windows and forecast cost.","repo":"openai/tiktoken","stars":18899},{"name":"tiktoken-cli","url":"https://github.com/samber/tiktoken-cli","category":"tokens","desc":"CLI to count tokens across files and directories using tiktoken.","repo":"samber/tiktoken-cli","stars":10},{"name":"tiktoken-rs","url":"https://github.com/zurawiki/tiktoken-rs","category":"tokens","desc":"Rust tokenizer library for GPT/tiktoken token accounting.","repo":"zurawiki/tiktoken-rs","stars":405},{"name":"ccusage","url":"https://github.com/ryoppippi/ccusage","category":"profiling","desc":"CLI that parses Claude Code's local JSONL logs to report token usage and cost by day, session, and project.","repo":"ryoppippi/ccusage","stars":17643},{"name":"claude-code-usage-analyzer","url":"https://github.com/aarora79/claude-code-usage-analyzer","category":"profiling","desc":"Analyzes Claude Code usage data to profile token and context consumption.","repo":"aarora79/claude-code-usage-analyzer","stars":4},{"name":"DSPy (Stanford NLP)","url":"https://github.com/stanfordnlp/dspy","category":"frameworks","desc":"Framework for programming (not prompting) LLMs, with typed signatures, modules, and automated prompt/context optimization.","repo":"stanfordnlp/dspy","stars":36505},{"name":"MCP Python SDK","url":"https://github.com/modelcontextprotocol/python-sdk","category":"frameworks","desc":"Official MCP SDK for exposing tools and resources that agents select into context.","repo":"modelcontextprotocol/python-sdk","stars":23827},{"name":"FastMCP","url":"https://github.com/jlowin/fastmcp","category":"frameworks","desc":"Ergonomic Python framework for building MCP servers that feed context to agents.","repo":"jlowin/fastmcp","stars":27004},{"name":"MetaGPT","url":"https://github.com/FoundationAgents/MetaGPT","category":"multiagent","desc":"Multi-agent framework that isolates context across role-specialized agents.","repo":"FoundationAgents/MetaGPT","stars":69610},{"name":"CAMEL","url":"https://github.com/camel-ai/camel","category":"multiagent","desc":"Framework for multi-agent systems with isolated per-agent contexts.","repo":"camel-ai/camel","stars":17521},{"name":"Ragas","url":"https://github.com/explodinggradients/ragas","category":"evals","desc":"Reference-free RAG evaluation with metrics for context relevance and precision, plus synthetic test-set generation.","repo":"explodinggradients/ragas","stars":15071},{"name":"DeepEval","url":"https://github.com/confident-ai/deepeval","category":"evals","desc":"Pytest-style LLM eval framework with debuggable RAG and context metrics for CI/CD.","repo":"confident-ai/deepeval","stars":17312},{"name":"Context Rot toolkit (Chroma)","url":"https://github.com/chroma-core/context-rot","category":"benchmarks","desc":"Toolkit reproducing Chroma's finding that LLM reliability degrades non-uniformly as input tokens grow, across 18 models.","repo":"chroma-core/context-rot","stars":291},{"name":"Context Rot report (Chroma)","url":"https://research.trychroma.com/context-rot","category":"benchmarks","desc":"Technical report showing performance drops with longer inputs, worse when needle and question are semantically similar.","stars":null},{"name":"NoLiMa (Adobe Research)","url":"https://github.com/adobe-research/NoLiMa","category":"benchmarks","desc":"Long-context benchmark beyond literal matching; needle and question share minimal lexical overlap, exposing steep degradation with length.","repo":"adobe-research/NoLiMa","stars":202},{"name":"RULER (NVIDIA)","url":"https://github.com/NVIDIA/RULER","category":"benchmarks","desc":"Synthetic benchmark measuring the real usable context size across retrieval, multi-hop, aggregation, and QA.","repo":"NVIDIA/RULER","stars":1591},{"name":"NoLiMa paper","url":"https://arxiv.org/abs/2502.05167","category":"papers","desc":"ICML paper: even GPT-4o falls from 99.3% to 69.7% as context length grows on association-based retrieval.","stars":null},{"name":"LLMLingua-2 paper","url":"https://arxiv.org/abs/2403.12968","category":"papers","desc":"Task-agnostic prompt compression via token classification distilled from GPT-4, 3-6x faster.","stars":null},{"name":"The Complexity Trap","url":"https://arxiv.org/html/2508.21433v1","category":"papers","desc":"Finds simple observation masking is as efficient as LLM summarization for agent context management.","stars":null},{"name":"ctxlens","repo":"royalpinto007/Ctxlens","url":"https://github.com/royalpinto007/Ctxlens","category":"profiling","desc":"Context-window profiler for agents: shows what is eating your tokens and where to cut.","stars":0},{"name":"ctxtrim","repo":"royalpinto007/Ctxtrim","url":"https://github.com/royalpinto007/Ctxtrim","category":"tokens","desc":"Trims AI-context bloat: finds the files ballooning your Claude Code, Cursor, and Codex token cost. npx ctxtrim.","stars":0}];
+const UPDATED = "2026-08-01";
+const CATS = {"foundational":"Foundations and definitions","management":"Context management and compaction","rag":"Retrieval and RAG","compression":"Prompt and context compression","memory":"Memory systems","tokens":"Token counting and cost","profiling":"Context-window profiling","frameworks":"Frameworks","multiagent":"Multi-agent and isolation","evals":"Evals for context quality","benchmarks":"Long-context and context rot","papers":"Papers"};
+let active = "all", q = "";
+const chips = document.getElementById("chips");
+[["all","All"], ...Object.entries(CATS)].forEach(([k,label])=>{
+  const c=document.createElement("span"); c.className="chip"+(k==="all"?" on":""); c.textContent=label; c.dataset.k=k;
+  c.onclick=()=>{active=k;[...chips.children].forEach(x=>x.classList.toggle("on",x.dataset.k===k));render();};
+  chips.appendChild(c);
+});
+const qi=document.getElementById("q"); qi.oninput=()=>{q=qi.value.trim().toLowerCase();render();};
+function kfmt(n){return n==null?"":n>=1000?(n/1000).toFixed(1).replace(/\.0$/,"")+"k":""+n;}
+function render(){
+  const grid=document.getElementById("grid"); grid.innerHTML="";
+  const rows=DATA.filter(t=>{
+    if(active!=="all"&&t.category!==active) return false;
+    if(!q) return true;
+    return (t.name+" "+t.desc+" "+t.category).toLowerCase().includes(q);
+  }).sort((a,b)=>(b.stars||0)-(a.stars||0));
+  document.getElementById("count").textContent=rows.length+" of "+DATA.length+" shown";
+  document.getElementById("empty").hidden=rows.length>0;
+  for(const t of rows){
+    const el=document.createElement("div"); el.className="card";
+    el.innerHTML='<div class="cat">'+(CATS[t.category]||t.category)+'</div>'+
+      '<div class="h"><a href="'+t.url+'" target="_blank" rel="noopener">'+t.name+'</a>'+
+      (t.stars!=null?'<span class="stars">* '+kfmt(t.stars)+'</span>':'')+'</div>'+
+      '<p class="desc">'+t.desc+'</p>';
+    grid.appendChild(el);
+  }
+}
+document.getElementById("updated").textContent = UPDATED ? ("Star counts updated "+UPDATED) : "Community-curated";
+render();
+</script>
+</body>
+</html>
