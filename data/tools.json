@@ -1,0 +1,257 @@
+[
+  {
+    "name": "Effective context engineering (Anthropic)",
+    "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "category": "foundational",
+    "desc": "Anthropic's formal definition: curating and maintaining the optimal set of tokens during LLM inference."
+  },
+  {
+    "name": "Context Engineering for Agents (LangChain)",
+    "url": "https://www.langchain.com/blog/context-engineering-for-agents",
+    "category": "foundational",
+    "desc": "LangChain's canonical framing of the four moves: write, select, compress, isolate."
+  },
+  {
+    "name": "Context Engineering for Agents (Lance Martin)",
+    "url": "https://rlancemartin.github.io/2025/06/23/context_engineering/",
+    "category": "foundational",
+    "desc": "Widely-cited practitioner essay on managing an agent's context across its trajectory."
+  },
+  {
+    "name": "Context Engineering: A Practical Guide (Sourcegraph)",
+    "url": "https://sourcegraph.com/blog/context-engineering",
+    "category": "foundational",
+    "desc": "Practical guide to context engineering for coding agents from the Sourcegraph/Amp team."
+  },
+  {
+    "name": "Context Engineering 101 (Victor Dibia)",
+    "url": "https://newsletter.victordibia.com/p/context-engineering-101-how-agents",
+    "category": "foundational",
+    "desc": "How agents implement context-engineering strategies, worked through Claude Code."
+  },
+  {
+    "name": "context-mode",
+    "url": "https://github.com/mksglu/context-mode",
+    "category": "management",
+    "desc": "MCP server that sandboxes tool output (up to 98% token reduction) and persists session memory in SQLite with BM25 retrieval on compaction.",
+    "repo": "mksglu/context-mode"
+  },
+  {
+    "name": "hermes-lcm",
+    "url": "https://github.com/stephenschoettler/hermes-lcm",
+    "category": "management",
+    "desc": "DAG-based context engine that compacts old context into depth-aware summary nodes without dropping messages.",
+    "repo": "stephenschoettler/hermes-lcm"
+  },
+  {
+    "name": "context-llemur",
+    "url": "https://github.com/jerpint/context-llemur",
+    "category": "management",
+    "desc": "Structural, human-plus-LLM-managed context tool for collaboration, no embeddings.",
+    "repo": "jerpint/context-llemur"
+  },
+  {
+    "name": "Context Compaction teardown (badlogic)",
+    "url": "https://gist.github.com/badlogic/cd2ef65b0697c4dbe2d13fbecb0a0a5f",
+    "category": "management",
+    "desc": "Comparative teardown of how Claude Code, Codex CLI, OpenCode, and Amp handle context compaction."
+  },
+  {
+    "name": "LlamaIndex",
+    "url": "https://github.com/run-llama/llama_index",
+    "category": "rag",
+    "desc": "Leading data framework for ingesting, indexing, and retrieving context to augment LLM output.",
+    "repo": "run-llama/llama_index"
+  },
+  {
+    "name": "Chroma",
+    "url": "https://github.com/chroma-core/chroma",
+    "category": "rag",
+    "desc": "Open-source vector database for building retrieval and context layers for LLM apps.",
+    "repo": "chroma-core/chroma"
+  },
+  {
+    "name": "LLMLingua (Microsoft)",
+    "url": "https://github.com/microsoft/LLMLingua",
+    "category": "compression",
+    "desc": "Coarse-to-fine prompt compression using a small LM to drop low-information tokens; LLMLingua-2 and LongLLMLingua included.",
+    "repo": "microsoft/LLMLingua"
+  },
+  {
+    "name": "LLMLingua paper",
+    "url": "https://arxiv.org/abs/2310.05736",
+    "category": "compression",
+    "desc": "Original paper on compressing prompts for accelerated inference while preserving quality."
+  },
+  {
+    "name": "Mem0",
+    "url": "https://github.com/mem0ai/mem0",
+    "category": "memory",
+    "desc": "Lightweight open-source memory layer adding persistent memory to any LLM app over vector and relational storage.",
+    "repo": "mem0ai/mem0"
+  },
+  {
+    "name": "Letta (formerly MemGPT)",
+    "url": "https://github.com/letta-ai/letta",
+    "category": "memory",
+    "desc": "Stateful-agent platform with main/recall/archival memory tiers the model pages in and out via tool calls.",
+    "repo": "letta-ai/letta"
+  },
+  {
+    "name": "Graphiti (Zep)",
+    "url": "https://github.com/getzep/graphiti",
+    "category": "memory",
+    "desc": "Temporal knowledge-graph memory that tracks how facts change over time with provenance.",
+    "repo": "getzep/graphiti"
+  },
+  {
+    "name": "Cognee",
+    "url": "https://github.com/topoteretes/cognee",
+    "category": "memory",
+    "desc": "Open-source memory framework building knowledge graphs from data for agent long-term memory.",
+    "repo": "topoteretes/cognee"
+  },
+  {
+    "name": "tiktoken (OpenAI)",
+    "url": "https://github.com/openai/tiktoken",
+    "category": "tokens",
+    "desc": "OpenAI's official BPE tokenizer for exact local token counting to stay inside context windows and forecast cost.",
+    "repo": "openai/tiktoken"
+  },
+  {
+    "name": "tiktoken-cli",
+    "url": "https://github.com/samber/tiktoken-cli",
+    "category": "tokens",
+    "desc": "CLI to count tokens across files and directories using tiktoken.",
+    "repo": "samber/tiktoken-cli"
+  },
+  {
+    "name": "tiktoken-rs",
+    "url": "https://github.com/zurawiki/tiktoken-rs",
+    "category": "tokens",
+    "desc": "Rust tokenizer library for GPT/tiktoken token accounting.",
+    "repo": "zurawiki/tiktoken-rs"
+  },
+  {
+    "name": "ccusage",
+    "url": "https://github.com/ryoppippi/ccusage",
+    "category": "profiling",
+    "desc": "CLI that parses Claude Code's local JSONL logs to report token usage and cost by day, session, and project.",
+    "repo": "ryoppippi/ccusage"
+  },
+  {
+    "name": "claude-code-usage-analyzer",
+    "url": "https://github.com/aarora79/claude-code-usage-analyzer",
+    "category": "profiling",
+    "desc": "Analyzes Claude Code usage data to profile token and context consumption.",
+    "repo": "aarora79/claude-code-usage-analyzer"
+  },
+  {
+    "name": "DSPy (Stanford NLP)",
+    "url": "https://github.com/stanfordnlp/dspy",
+    "category": "frameworks",
+    "desc": "Framework for programming (not prompting) LLMs, with typed signatures, modules, and automated prompt/context optimization.",
+    "repo": "stanfordnlp/dspy"
+  },
+  {
+    "name": "MCP Python SDK",
+    "url": "https://github.com/modelcontextprotocol/python-sdk",
+    "category": "frameworks",
+    "desc": "Official MCP SDK for exposing tools and resources that agents select into context.",
+    "repo": "modelcontextprotocol/python-sdk"
+  },
+  {
+    "name": "FastMCP",
+    "url": "https://github.com/jlowin/fastmcp",
+    "category": "frameworks",
+    "desc": "Ergonomic Python framework for building MCP servers that feed context to agents.",
+    "repo": "jlowin/fastmcp"
+  },
+  {
+    "name": "MetaGPT",
+    "url": "https://github.com/FoundationAgents/MetaGPT",
+    "category": "multiagent",
+    "desc": "Multi-agent framework that isolates context across role-specialized agents.",
+    "repo": "FoundationAgents/MetaGPT"
+  },
+  {
+    "name": "CAMEL",
+    "url": "https://github.com/camel-ai/camel",
+    "category": "multiagent",
+    "desc": "Framework for multi-agent systems with isolated per-agent contexts.",
+    "repo": "camel-ai/camel"
+  },
+  {
+    "name": "Ragas",
+    "url": "https://github.com/explodinggradients/ragas",
+    "category": "evals",
+    "desc": "Reference-free RAG evaluation with metrics for context relevance and precision, plus synthetic test-set generation.",
+    "repo": "explodinggradients/ragas"
+  },
+  {
+    "name": "DeepEval",
+    "url": "https://github.com/confident-ai/deepeval",
+    "category": "evals",
+    "desc": "Pytest-style LLM eval framework with debuggable RAG and context metrics for CI/CD.",
+    "repo": "confident-ai/deepeval"
+  },
+  {
+    "name": "Context Rot toolkit (Chroma)",
+    "url": "https://github.com/chroma-core/context-rot",
+    "category": "benchmarks",
+    "desc": "Toolkit reproducing Chroma's finding that LLM reliability degrades non-uniformly as input tokens grow, across 18 models.",
+    "repo": "chroma-core/context-rot"
+  },
+  {
+    "name": "Context Rot report (Chroma)",
+    "url": "https://research.trychroma.com/context-rot",
+    "category": "benchmarks",
+    "desc": "Technical report showing performance drops with longer inputs, worse when needle and question are semantically similar."
+  },
+  {
+    "name": "NoLiMa (Adobe Research)",
+    "url": "https://github.com/adobe-research/NoLiMa",
+    "category": "benchmarks",
+    "desc": "Long-context benchmark beyond literal matching; needle and question share minimal lexical overlap, exposing steep degradation with length.",
+    "repo": "adobe-research/NoLiMa"
+  },
+  {
+    "name": "RULER (NVIDIA)",
+    "url": "https://github.com/NVIDIA/RULER",
+    "category": "benchmarks",
+    "desc": "Synthetic benchmark measuring the real usable context size across retrieval, multi-hop, aggregation, and QA.",
+    "repo": "NVIDIA/RULER"
+  },
+  {
+    "name": "NoLiMa paper",
+    "url": "https://arxiv.org/abs/2502.05167",
+    "category": "papers",
+    "desc": "ICML paper: even GPT-4o falls from 99.3% to 69.7% as context length grows on association-based retrieval."
+  },
+  {
+    "name": "LLMLingua-2 paper",
+    "url": "https://arxiv.org/abs/2403.12968",
+    "category": "papers",
+    "desc": "Task-agnostic prompt compression via token classification distilled from GPT-4, 3-6x faster."
+  },
+  {
+    "name": "The Complexity Trap",
+    "url": "https://arxiv.org/html/2508.21433v1",
+    "category": "papers",
+    "desc": "Finds simple observation masking is as efficient as LLM summarization for agent context management."
+  },
+  {
+    "name": "ctxlens",
+    "repo": "royalpinto007/Ctxlens",
+    "url": "https://github.com/royalpinto007/Ctxlens",
+    "category": "profiling",
+    "desc": "Context-window profiler for agents: shows what is eating your tokens and where to cut."
+  },
+  {
+    "name": "ctxtrim",
+    "repo": "royalpinto007/Ctxtrim",
+    "url": "https://github.com/royalpinto007/Ctxtrim",
+    "category": "tokens",
+    "desc": "Trims AI-context bloat: finds the files ballooning your Claude Code, Cursor, and Codex token cost. npx ctxtrim."
+  }
+]
