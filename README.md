@@ -18,7 +18,7 @@ Prompt engineering was about wording one message. Context engineering is the sys
 **The one rule:** a bigger context window is a budget, not a solution. Spend it on the smallest set of tokens that makes the model right.
 
 <!-- LIST:START -->
-**38 entries**, auto-refreshed weekly. Star counts updated **2026-08-01**. Browse the filterable version at **[context-engineering.agentpostmortem.com](https://context-engineering.agentpostmortem.com)**.
+**39 entries**, auto-refreshed weekly. Star counts updated **2026-08-01**. Browse the filterable version at **[context-engineering.agentpostmortem.com](https://context-engineering.agentpostmortem.com)**.
 
 ### Foundations and definitions
 
@@ -58,6 +58,7 @@ Prompt engineering was about wording one message. Context engineering is the sys
 - [tiktoken-rs](https://github.com/zurawiki/tiktoken-rs) `* 405`: Rust tokenizer library for GPT/tiktoken token accounting.
 - [tiktoken-cli](https://github.com/samber/tiktoken-cli) `* 10`: CLI to count tokens across files and directories using tiktoken.
 - [ctxtrim](https://github.com/royalpinto007/Ctxtrim) `* 0`: Trims AI-context bloat: finds the files ballooning your Claude Code, Cursor, and Codex token cost. npx ctxtrim.
+- [tokencut](https://github.com/royalpinto007/tokencut) `* 0`: Measure and cut the token cost of an LLM or agent message payload before you send it: truncate bloated tool results, drop duplicate context, trim to a budget. npx tokencut.
 
 ### Context-window profiling
 

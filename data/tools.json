@@ -253,5 +253,12 @@
     "url": "https://github.com/royalpinto007/Ctxtrim",
     "category": "tokens",
     "desc": "Trims AI-context bloat: finds the files ballooning your Claude Code, Cursor, and Codex token cost. npx ctxtrim."
+  },
+  {
+    "name": "tokencut",
+    "repo": "royalpinto007/tokencut",
+    "url": "https://github.com/royalpinto007/tokencut",
+    "category": "tokens",
+    "desc": "Measure and cut the token cost of an LLM or agent message payload before you send it: truncate bloated tool results, drop duplicate context, trim to a budget. npx tokencut."
   }
 ]
