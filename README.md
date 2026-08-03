@@ -18,7 +18,7 @@ Prompt engineering was about wording one message. Context engineering is the sys
 **The one rule:** a bigger context window is a budget, not a solution. Spend it on the smallest set of tokens that makes the model right.
 
 <!-- LIST:START -->
-**39 entries**, auto-refreshed weekly. Star counts updated **2026-08-01**. Browse the filterable version at **[context-engineering.agentpostmortem.com](https://context-engineering.agentpostmortem.com)**.
+**39 entries**, auto-refreshed weekly. Star counts updated **2026-08-03**. Browse the filterable version at **[context-engineering.agentpostmortem.com](https://context-engineering.agentpostmortem.com)**.
 
 ### Foundations and definitions
 
@@ -30,8 +30,8 @@ Prompt engineering was about wording one message. Context engineering is the sys
 
 ### Context management and compaction
 
-- [context-mode](https://github.com/mksglu/context-mode) `* 19.5k`: MCP server that sandboxes tool output (up to 98% token reduction) and persists session memory in SQLite with BM25 retrieval on compaction.
-- [hermes-lcm](https://github.com/stephenschoettler/hermes-lcm) `* 930`: DAG-based context engine that compacts old context into depth-aware summary nodes without dropping messages.
+- [context-mode](https://github.com/mksglu/context-mode) `* 19.6k`: MCP server that sandboxes tool output (up to 98% token reduction) and persists session memory in SQLite with BM25 retrieval on compaction.
+- [hermes-lcm](https://github.com/stephenschoettler/hermes-lcm) `* 947`: DAG-based context engine that compacts old context into depth-aware summary nodes without dropping messages.
 - [context-llemur](https://github.com/jerpint/context-llemur) `* 93`: Structural, human-plus-LLM-managed context tool for collaboration, no embeddings.
 - [Context Compaction teardown (badlogic)](https://gist.github.com/badlogic/cd2ef65b0697c4dbe2d13fbecb0a0a5f): Comparative teardown of how Claude Code, Codex CLI, OpenCode, and Amp handle context compaction.
 
@@ -47,10 +47,10 @@ Prompt engineering was about wording one message. Context engineering is the sys
 
 ### Memory systems
 
-- [Mem0](https://github.com/mem0ai/mem0) `* 62.2k`: Lightweight open-source memory layer adding persistent memory to any LLM app over vector and relational storage.
-- [Cognee](https://github.com/topoteretes/cognee) `* 29.6k`: Open-source memory framework building knowledge graphs from data for agent long-term memory.
-- [Graphiti (Zep)](https://github.com/getzep/graphiti) `* 29.4k`: Temporal knowledge-graph memory that tracks how facts change over time with provenance.
-- [Letta (formerly MemGPT)](https://github.com/letta-ai/letta) `* 24k`: Stateful-agent platform with main/recall/archival memory tiers the model pages in and out via tool calls.
+- [Mem0](https://github.com/mem0ai/mem0) `* 62.4k`: Lightweight open-source memory layer adding persistent memory to any LLM app over vector and relational storage.
+- [Cognee](https://github.com/topoteretes/cognee) `* 29.7k`: Open-source memory framework building knowledge graphs from data for agent long-term memory.
+- [Graphiti (Zep)](https://github.com/getzep/graphiti) `* 29.5k`: Temporal knowledge-graph memory that tracks how facts change over time with provenance.
+- [Letta (formerly MemGPT)](https://github.com/letta-ai/letta) `* 24.1k`: Stateful-agent platform with main/recall/archival memory tiers the model pages in and out via tool calls.
 
 ### Token counting and cost
 
@@ -62,15 +62,15 @@ Prompt engineering was about wording one message. Context engineering is the sys
 
 ### Context-window profiling
 
-- [ccusage](https://github.com/ryoppippi/ccusage) `* 17.6k`: CLI that parses Claude Code's local JSONL logs to report token usage and cost by day, session, and project.
-- [claude-code-usage-analyzer](https://github.com/aarora79/claude-code-usage-analyzer) `* 4`: Analyzes Claude Code usage data to profile token and context consumption.
+- [ccusage](https://github.com/ryoppippi/ccusage) `* 17.7k`: CLI that parses Claude Code's local JSONL logs to report token usage and cost by day, session, and project.
+- [claude-code-usage-analyzer](https://github.com/aarora79/claude-code-usage-analyzer) `* 5`: Analyzes Claude Code usage data to profile token and context consumption.
 - [ctxlens](https://github.com/royalpinto007/Ctxlens) `* 0`: Context-window profiler for agents: shows what is eating your tokens and where to cut.
 
 ### Frameworks
 
-- [DSPy (Stanford NLP)](https://github.com/stanfordnlp/dspy) `* 36.5k`: Framework for programming (not prompting) LLMs, with typed signatures, modules, and automated prompt/context optimization.
+- [DSPy (Stanford NLP)](https://github.com/stanfordnlp/dspy) `* 36.6k`: Framework for programming (not prompting) LLMs, with typed signatures, modules, and automated prompt/context optimization.
 - [FastMCP](https://github.com/jlowin/fastmcp) `* 27k`: Ergonomic Python framework for building MCP servers that feed context to agents.
-- [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) `* 23.8k`: Official MCP SDK for exposing tools and resources that agents select into context.
+- [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) `* 23.9k`: Official MCP SDK for exposing tools and resources that agents select into context.
 
 ### Multi-agent and isolation
 
@@ -79,13 +79,13 @@ Prompt engineering was about wording one message. Context engineering is the sys
 
 ### Evals for context quality
 
-- [DeepEval](https://github.com/confident-ai/deepeval) `* 17.3k`: Pytest-style LLM eval framework with debuggable RAG and context metrics for CI/CD.
+- [DeepEval](https://github.com/confident-ai/deepeval) `* 17.4k`: Pytest-style LLM eval framework with debuggable RAG and context metrics for CI/CD.
 - [Ragas](https://github.com/explodinggradients/ragas) `* 15.1k`: Reference-free RAG evaluation with metrics for context relevance and precision, plus synthetic test-set generation.
 
 ### Long-context and context rot
 
 - [RULER (NVIDIA)](https://github.com/NVIDIA/RULER) `* 1.6k`: Synthetic benchmark measuring the real usable context size across retrieval, multi-hop, aggregation, and QA.
-- [Context Rot toolkit (Chroma)](https://github.com/chroma-core/context-rot) `* 291`: Toolkit reproducing Chroma's finding that LLM reliability degrades non-uniformly as input tokens grow, across 18 models.
+- [Context Rot toolkit (Chroma)](https://github.com/chroma-core/context-rot) `* 293`: Toolkit reproducing Chroma's finding that LLM reliability degrades non-uniformly as input tokens grow, across 18 models.
 - [NoLiMa (Adobe Research)](https://github.com/adobe-research/NoLiMa) `* 202`: Long-context benchmark beyond literal matching; needle and question share minimal lexical overlap, exposing steep degradation with length.
 - [Context Rot report (Chroma)](https://research.trychroma.com/context-rot): Technical report showing performance drops with longer inputs, worse when needle and question are semantically similar.
 
