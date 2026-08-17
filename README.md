@@ -18,7 +18,7 @@ Prompt engineering was about wording one message. Context engineering is the sys
 **The one rule:** a bigger context window is a budget, not a solution. Spend it on the smallest set of tokens that makes the model right.
 
 <!-- LIST:START -->
-**39 entries**, auto-refreshed weekly. Star counts updated **2026-08-10**. Browse the filterable version at **[context-engineering.agentpostmortem.com](https://context-engineering.agentpostmortem.com)**.
+**39 entries**, auto-refreshed weekly. Star counts updated **2026-08-17**. Browse the filterable version at **[context-engineering.agentpostmortem.com](https://context-engineering.agentpostmortem.com)**.
 
 ### Foundations and definitions
 
@@ -30,27 +30,27 @@ Prompt engineering was about wording one message. Context engineering is the sys
 
 ### Context management and compaction
 
-- [context-mode](https://github.com/mksglu/context-mode) `* 19.8k`: MCP server that sandboxes tool output (up to 98% token reduction) and persists session memory in SQLite with BM25 retrieval on compaction.
-- [hermes-lcm](https://github.com/stephenschoettler/hermes-lcm) `* 977`: DAG-based context engine that compacts old context into depth-aware summary nodes without dropping messages.
+- [context-mode](https://github.com/mksglu/context-mode) `* 19.9k`: MCP server that sandboxes tool output (up to 98% token reduction) and persists session memory in SQLite with BM25 retrieval on compaction.
+- [hermes-lcm](https://github.com/stephenschoettler/hermes-lcm) `* 991`: DAG-based context engine that compacts old context into depth-aware summary nodes without dropping messages.
 - [context-llemur](https://github.com/jerpint/context-llemur) `* 93`: Structural, human-plus-LLM-managed context tool for collaboration, no embeddings.
 - [Context Compaction teardown (badlogic)](https://gist.github.com/badlogic/cd2ef65b0697c4dbe2d13fbecb0a0a5f): Comparative teardown of how Claude Code, Codex CLI, OpenCode, and Amp handle context compaction.
 
 ### Retrieval and RAG
 
-- [LlamaIndex](https://github.com/run-llama/llama_index) `* 51.5k`: Leading data framework for ingesting, indexing, and retrieving context to augment LLM output.
-- [Chroma](https://github.com/chroma-core/chroma) `* 29k`: Open-source vector database for building retrieval and context layers for LLM apps.
+- [LlamaIndex](https://github.com/run-llama/llama_index) `* 51.7k`: Leading data framework for ingesting, indexing, and retrieving context to augment LLM output.
+- [Chroma](https://github.com/chroma-core/chroma) `* 29.1k`: Open-source vector database for building retrieval and context layers for LLM apps.
 
 ### Prompt and context compression
 
-- [LLMLingua (Microsoft)](https://github.com/microsoft/LLMLingua) `* 6.5k`: Coarse-to-fine prompt compression using a small LM to drop low-information tokens; LLMLingua-2 and LongLLMLingua included.
+- [LLMLingua (Microsoft)](https://github.com/microsoft/LLMLingua) `* 6.6k`: Coarse-to-fine prompt compression using a small LM to drop low-information tokens; LLMLingua-2 and LongLLMLingua included.
 - [LLMLingua paper](https://arxiv.org/abs/2310.05736): Original paper on compressing prompts for accelerated inference while preserving quality.
 
 ### Memory systems
 
-- [Mem0](https://github.com/mem0ai/mem0) `* 62.9k`: Lightweight open-source memory layer adding persistent memory to any LLM app over vector and relational storage.
-- [Cognee](https://github.com/topoteretes/cognee) `* 29.9k`: Open-source memory framework building knowledge graphs from data for agent long-term memory.
-- [Graphiti (Zep)](https://github.com/getzep/graphiti) `* 29.7k`: Temporal knowledge-graph memory that tracks how facts change over time with provenance.
-- [Letta (formerly MemGPT)](https://github.com/letta-ai/letta) `* 24.2k`: Stateful-agent platform with main/recall/archival memory tiers the model pages in and out via tool calls.
+- [Mem0](https://github.com/mem0ai/mem0) `* 63.4k`: Lightweight open-source memory layer adding persistent memory to any LLM app over vector and relational storage.
+- [Cognee](https://github.com/topoteretes/cognee) `* 30.1k`: Open-source memory framework building knowledge graphs from data for agent long-term memory.
+- [Graphiti (Zep)](https://github.com/getzep/graphiti) `* 30k`: Temporal knowledge-graph memory that tracks how facts change over time with provenance.
+- [Letta (formerly MemGPT)](https://github.com/letta-ai/letta) `* 24.3k`: Stateful-agent platform with main/recall/archival memory tiers the model pages in and out via tool calls.
 
 ### Token counting and cost
 
@@ -62,31 +62,31 @@ Prompt engineering was about wording one message. Context engineering is the sys
 
 ### Context-window profiling
 
-- [ccusage](https://github.com/ryoppippi/ccusage) `* 17.8k`: CLI that parses Claude Code's local JSONL logs to report token usage and cost by day, session, and project.
+- [ccusage](https://github.com/ryoppippi/ccusage) `* 18k`: CLI that parses Claude Code's local JSONL logs to report token usage and cost by day, session, and project.
 - [claude-code-usage-analyzer](https://github.com/aarora79/claude-code-usage-analyzer) `* 5`: Analyzes Claude Code usage data to profile token and context consumption.
 - [ctxlens](https://github.com/royalpinto007/Ctxlens) `* 0`: Context-window profiler for agents: shows what is eating your tokens and where to cut.
 
 ### Frameworks
 
-- [DSPy (Stanford NLP)](https://github.com/stanfordnlp/dspy) `* 37k`: Framework for programming (not prompting) LLMs, with typed signatures, modules, and automated prompt/context optimization.
-- [FastMCP](https://github.com/jlowin/fastmcp) `* 27.1k`: Ergonomic Python framework for building MCP servers that feed context to agents.
+- [DSPy (Stanford NLP)](https://github.com/stanfordnlp/dspy) `* 37.3k`: Framework for programming (not prompting) LLMs, with typed signatures, modules, and automated prompt/context optimization.
+- [FastMCP](https://github.com/jlowin/fastmcp) `* 27.2k`: Ergonomic Python framework for building MCP servers that feed context to agents.
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) `* 24k`: Official MCP SDK for exposing tools and resources that agents select into context.
 
 ### Multi-agent and isolation
 
-- [MetaGPT](https://github.com/FoundationAgents/MetaGPT) `* 69.8k`: Multi-agent framework that isolates context across role-specialized agents.
+- [MetaGPT](https://github.com/FoundationAgents/MetaGPT) `* 69.9k`: Multi-agent framework that isolates context across role-specialized agents.
 - [CAMEL](https://github.com/camel-ai/camel) `* 17.6k`: Framework for multi-agent systems with isolated per-agent contexts.
 
 ### Evals for context quality
 
-- [DeepEval](https://github.com/confident-ai/deepeval) `* 17.5k`: Pytest-style LLM eval framework with debuggable RAG and context metrics for CI/CD.
-- [Ragas](https://github.com/explodinggradients/ragas) `* 15.2k`: Reference-free RAG evaluation with metrics for context relevance and precision, plus synthetic test-set generation.
+- [DeepEval](https://github.com/confident-ai/deepeval) `* 17.6k`: Pytest-style LLM eval framework with debuggable RAG and context metrics for CI/CD.
+- [Ragas](https://github.com/explodinggradients/ragas) `* 15.3k`: Reference-free RAG evaluation with metrics for context relevance and precision, plus synthetic test-set generation.
 
 ### Long-context and context rot
 
 - [RULER (NVIDIA)](https://github.com/NVIDIA/RULER) `* 1.6k`: Synthetic benchmark measuring the real usable context size across retrieval, multi-hop, aggregation, and QA.
-- [Context Rot toolkit (Chroma)](https://github.com/chroma-core/context-rot) `* 294`: Toolkit reproducing Chroma's finding that LLM reliability degrades non-uniformly as input tokens grow, across 18 models.
-- [NoLiMa (Adobe Research)](https://github.com/adobe-research/NoLiMa) `* 202`: Long-context benchmark beyond literal matching; needle and question share minimal lexical overlap, exposing steep degradation with length.
+- [Context Rot toolkit (Chroma)](https://github.com/chroma-core/context-rot) `* 296`: Toolkit reproducing Chroma's finding that LLM reliability degrades non-uniformly as input tokens grow, across 18 models.
+- [NoLiMa (Adobe Research)](https://github.com/adobe-research/NoLiMa) `* 201`: Long-context benchmark beyond literal matching; needle and question share minimal lexical overlap, exposing steep degradation with length.
 - [Context Rot report (Chroma)](https://research.trychroma.com/context-rot): Technical report showing performance drops with longer inputs, worse when needle and question are semantically similar.
 
 ### Papers
