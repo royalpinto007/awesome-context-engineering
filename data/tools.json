@@ -112,6 +112,13 @@
     "repo": "topoteretes/cognee"
   },
   {
+    "name": "Screenpipe",
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe",
+    "category": "memory",
+    "desc": "Searchable local screen text and audio history for agent context through MCP and a local API, source-available under the Screenpipe Commercial License."
+  },
+  {
     "name": "tiktoken (OpenAI)",
     "url": "https://github.com/openai/tiktoken",
     "category": "tokens",
