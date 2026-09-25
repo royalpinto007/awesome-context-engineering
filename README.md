@@ -18,7 +18,7 @@ Prompt engineering was about wording one message. Context engineering is the sys
 **The one rule:** a bigger context window is a budget, not a solution. Spend it on the smallest set of tokens that makes the model right.
 
 <!-- LIST:START -->
-**39 entries**, auto-refreshed weekly. Star counts updated **2026-09-21**. Browse the filterable version at **[context-engineering.agentpostmortem.com](https://context-engineering.agentpostmortem.com)**.
+**40 entries**, auto-refreshed weekly. Star counts updated **2026-09-21**. Browse the filterable version at **[context-engineering.agentpostmortem.com](https://context-engineering.agentpostmortem.com)**.
 
 ### Foundations and definitions
 
@@ -51,6 +51,7 @@ Prompt engineering was about wording one message. Context engineering is the sys
 - [Graphiti (Zep)](https://github.com/getzep/graphiti) `* 31.1k`: Temporal knowledge-graph memory that tracks how facts change over time with provenance.
 - [Cognee](https://github.com/topoteretes/cognee) `* 30.9k`: Open-source memory framework building knowledge graphs from data for agent long-term memory.
 - [Letta (formerly MemGPT)](https://github.com/letta-ai/letta) `* 24.8k`: Stateful-agent platform with main/recall/archival memory tiers the model pages in and out via tool calls.
+- [Screenpipe](https://github.com/screenpipe/screenpipe): Searchable local screen text and audio history for agent context through MCP and a local API, source-available under the Screenpipe Commercial License.
 
 ### Token counting and cost
 
